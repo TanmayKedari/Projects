@@ -1,6 +1,7 @@
 #!/bin/bash
 #array
 
+#Player's Turn(Which players turn it is to play)
 function evenodd()
 {
 	if [ $(expr "$1" % 2) -eq 1 ]
@@ -11,7 +12,7 @@ function evenodd()
 	fi
 }
 
-
+#Horizontal Check of winning condition
 function hcheck()
 {
 	#echo "hcheck"
@@ -43,7 +44,7 @@ function hcheck()
 
 
 
-
+#Vertical Check of winning condition
 function vcheck()
 {
 	#echo "vcheck: $1 ,$2"
@@ -73,7 +74,7 @@ function vcheck()
 	fi
 }
 
-
+#Diagonal Check of winning condition
 function dcheck()
 {
 	#echo "dcheck"
@@ -96,6 +97,7 @@ function dcheck()
 	fi
 }
 
+#User Interface on bash
 function print()
 {
 	loop=$1
